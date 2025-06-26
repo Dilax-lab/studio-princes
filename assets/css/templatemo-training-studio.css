@@ -525,8 +525,8 @@ background-color: #807e7e;
   }
   .header-area .main-nav .nav li:last-child a:hover,
   .header-area .main-nav .nav li:last-child:hover a {
-    background-color: #5d0909!important;
-    color: #fff!important;
+    background-color:#fff !important;
+    color:#0c0c0c !important;
   }
   .header-area.header-sticky .nav {
     margin-top: 80px !important;
