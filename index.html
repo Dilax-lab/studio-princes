@@ -53,22 +53,106 @@ https://templatemo.com/tm-548-training-studio
                         <a href="index.html" class="logo">Studio<em> Prince</em></a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
-                        <ul class="nav">
-                            <li class="scroll-to-section"><a href="#top" class="active"><b>Home</b></a></li>
-                            <li class="scroll-to-section"><a href="#features"><b>About</b></a></li>
-                            <li class="scroll-to-section"><a href="#our-classes"><b>Gallery</b></a></li>
-                            
-                            <li class="scroll-to-section"><a href="#contact-us"><b>Contact</b></a></li> 
-                            
-                        </ul>        
-                        <a class='menu-trigger'>
-                            <span>Menu</span>
-                        </a>
+                      <button class="toggle-btn" id="navToggle">
+      ☰
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#top" class="active">Home</a></li>
+      <li><a href="#features">About</a></li>
+      <li><a href="#our-classes">Gallery</a></li>
+      <li><a href="#contact-us">Contact</a></li>
+    </ul>
                         <!-- ***** Menu End ***** -->
                     </nav>
                 </div>
             </div>
         </div>
+      <script>
+  const toggleBtn = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  toggleBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+      <style>
+        .navbar {
+  background-color: #333;
+  color: #fff;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Brand/logo */
+.brand {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Hide burger button on desktop */
+.toggle-btn {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+/* Navigation links */
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 2rem;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ddd;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .toggle-btn {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  .nav-links.active {
+    max-height: 300px; /* Adjust as needed */
+  }
+
+  .nav-links li {
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  .nav-links li a {
+    margin: 0;
+  }
+}
+      </style>
     </header>
     <!-- ***** Header Area End ***** -->
 
